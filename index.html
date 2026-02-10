@@ -13,48 +13,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .font-struk { font-family: 'Courier Prime', monospace; }
-        
-        /* Background Langit Biru ala Gambar */
-        .sky-bg {
-            background: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Efek Awan Bergerak (Animasi CSS Murni) */
-        .cloud {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            filter: blur(20px);
-            animation: floatCloud 20s infinite linear;
-        }
-        @keyframes floatCloud {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(100vw); }
-        }
-
-        /* Efek Kertas Struk (Zigzag Bottom) */
-        .receipt-card {
-            background: #f8f8f8;
-            position: relative;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
-        }
-        .receipt-card::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: linear-gradient(45deg, transparent 33.333%, #f8f8f8 33.333%, #f8f8f8 66.667%, transparent 66.667%), 
-                        linear-gradient(-45deg, transparent 33.333%, #f8f8f8 33.333%, #f8f8f8 66.667%, transparent 66.667%);
-            background-size: 20px 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-800 bg-blue-50">
 
@@ -105,10 +64,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                
                 <div class="receipt-card p-8 text-center transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-1 bg-gray-300 mx-auto mb-6"></div> <h3 class="text-2xl font-bold mb-2 font-struk uppercase">Editing Vlog</h3>
-                    <div class="border-b-2 border-dashed border-gray-300 w-full my-4"></div>
+                    <div class="w-16 h-1 bg-gray-300 mx-auto mb-6"></div>
+                    <h3 class="text-2xl font-bold mb-2 font-struk uppercase">Editing Vlog</h3>
+                    <div class="dashed-line w-full my-4"></div>
                     <p class="text-4xl font-bold text-blue-600 mb-2">15K<span class="text-sm text-gray-500 font-normal">/start</span></p>
                     <ul class="text-left text-gray-600 space-y-3 mb-8 font-struk text-sm mt-6 pl-4">
                         <li><i class="fas fa-check text-green-500 mr-2"></i> Cut to cut rapi</li>
@@ -122,7 +81,7 @@
                     <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-3 py-1 text-blue-900 rounded-bl-lg">POPULER</div>
                     <div class="w-16 h-1 bg-gray-300 mx-auto mb-6"></div>
                     <h3 class="text-2xl font-bold mb-2 font-struk uppercase">Video Tugas</h3>
-                    <div class="border-b-2 border-dashed border-gray-300 w-full my-4"></div>
+                    <div class="dashed-line w-full my-4"></div>
                     <p class="text-4xl font-bold text-blue-600 mb-2">20K<span class="text-sm text-gray-500 font-normal">/start</span></p>
                     <ul class="text-left text-gray-600 space-y-3 mb-8 font-struk text-sm mt-6 pl-4">
                         <li><i class="fas fa-check text-green-500 mr-2"></i> Transisi Menarik</li>
@@ -135,7 +94,7 @@
                 <div class="receipt-card p-8 text-center transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-16 h-1 bg-gray-300 mx-auto mb-6"></div>
                     <h3 class="text-2xl font-bold mb-2 font-struk uppercase">Short Movie</h3>
-                    <div class="border-b-2 border-dashed border-gray-300 w-full my-4"></div>
+                    <div class="dashed-line w-full my-4"></div>
                     <p class="text-4xl font-bold text-blue-600 mb-2">50K<span class="text-sm text-gray-500 font-normal">/start</span></p>
                     <ul class="text-left text-gray-600 space-y-3 mb-8 font-struk text-sm mt-6 pl-4">
                         <li><i class="fas fa-check text-green-500 mr-2"></i> Cinematic Grading</li>
@@ -144,52 +103,20 @@
                     </ul>
                     <a href="https://wa.me/6285231230978?text=Kak%20saya%20mau%20order%20Edit%20Short%20Movie" class="block w-full bg-gray-800 text-white py-3 rounded hover:bg-black transition font-struk">ORDER MOVIE</a>
                 </div>
-
             </div>
 
             <div class="mt-12 bg-white rounded-xl shadow-sm p-6 max-w-3xl mx-auto border-l-4 border-yellow-400" data-aos="fade-in">
                 <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle text-yellow-500 mr-2"></i> Catatan Penting:</h4>
                 <ul class="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Pengerjaan bisa selesai dalam <strong>1x24 jam</strong> (tergantung durasi & antrian).</li>
-                    <li>Butuh cepat? Ada <strong>Inrush fee (Biaya Kilat) hanya 5k!</strong></li>
-                    <li>Pembayaran via: <span class="font-bold text-blue-600">DANA & GoPay</span>.</li>
+                    <li>Pengerjaan bisa selesai dalam <strong>1x24 jam</strong>.</li>
+                    <li><strong>Inrush fee (Biaya Kilat) hanya 5k!</strong></li>
+                    <li>Pembayaran: <span class="font-bold text-blue-600">DANA & GoPay</span>.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="why" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800">Kenapa Harus Kami?</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6" data-aos="fade-up">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">Proses Cepat</h3>
-                    <p class="text-gray-600">Deadline mepet? Tenang, kami siap bantu selesaikan tugasmu secepat kilat.</p>
-                </div>
-                <div class="p-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-600 text-2xl">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">Harga Pelajar</h3>
-                    <p class="text-gray-600">Start from 15k aja! Dompet aman, nilai tugas aman, konten vlog jalan terus.</p>
-                </div>
-                <div class="p-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600 text-2xl">
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">Bayar Mudah</h3>
-                    <p class="text-gray-600">Support pembayaran digital via Dana & Gopay. Sat set langsung jadi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-10">
+    <footer class="bg-gray-900 text-white py-10 mt-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-2xl font-bold mb-4 text-blue-400">Jasa Editing Video</h2>
             <p class="mb-6 opacity-70">Siap membantu tugas dan kontenmu menjadi lebih menarik.</p>
@@ -209,11 +136,7 @@
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true, // Animasi hanya terjadi sekali saat scroll
-            duration: 800, // Durasi animasi
-        });
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
