@@ -1,0 +1,56 @@
+/* Font Utama Website */
+body { 
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Font Khusus Struk Belanja */
+.font-struk { 
+    font-family: 'Courier Prime', monospace; 
+}
+
+/* Garis putus-putus pada struk */
+.dashed-line {
+    border-bottom: 2px dashed #d1d5db;
+}
+
+/* Background Langit Biru (Hero Section) */
+.sky-bg {
+    background: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek Awan Bergerak (Animasi CSS) */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: floatCloud 20s infinite linear;
+}
+
+/* Keyframes untuk pergerakan awan */
+@keyframes floatCloud {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(100vw); }
+}
+
+/* Kartu Harga dengan Efek Kertas Sobek (Zigzag) */
+.receipt-card {
+    background: #f8f8f8;
+    position: relative;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+/* Membuat gerigi di bawah kartu (Efek sobekan struk) */
+.receipt-card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(45deg, transparent 33.333%, #f8f8f8 33.333%, #f8f8f8 66.667%, transparent 66.667%), 
+                linear-gradient(-45deg, transparent 33.333%, #f8f8f8 33.333%, #f8f8f8 66.667%, transparent 66.667%);
+    background-size: 20px 40px;
+}
